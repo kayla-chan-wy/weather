@@ -17,6 +17,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
+          {/* https://www.weatherapi.com/docs/weather_conditions.json */}
         </a>
       </header>
     </div>
