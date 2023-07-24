@@ -1,4 +1,4 @@
-import { extendBaseTheme } from "@chakra-ui/react";
+import { defineStyleConfig, extendBaseTheme, extendTheme } from "@chakra-ui/react";
 
 const palette = {
     primary: {
@@ -95,8 +95,34 @@ const components = {
 }
 
 export const theme = extendBaseTheme({
+    layerStyles: {
+        cardBase: {
+            bg: '#f5f7f9',
+            color: '#64c5b1',
+        },
+        card: {
+            borderRadius: '20px',
+            boxShadow: '0 12px 30px rgba(46,71,101,.1)',
+        },
+        cardLeft: {
+            backgroundSize: 'cover',
+            color: '#FFFFFF',
+            borderRadius: '15px 0 0 15px',
+            height: '40rem',
+            width: '35rem',
+            textAlign: 'center',
+        },
+        cardRight: {
+            borderRadius: '0 15px 15px 0',
+            bg: '#FFFFFF',
+            height: '40rem',
+            width: '35rem',
+            textAlign: 'center',
+            padding: '50px 30px',
+        },
+    },
     components: {
-
+        
     },
     fonts: {
         heading: `'Jost', sans-serif`,
