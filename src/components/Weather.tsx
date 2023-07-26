@@ -62,10 +62,14 @@ export default function Weather() {
         fetchCurrentWeather(location);
     };
 
+    type weatherCodesKeyType = typeof weatherCodes;
+
     return (
         <Flex alignItems={'center'} justifyContent={'center'} height={'100vh'} layerStyle='cardBase'>
             <HStack layerStyle={'card'} spacing={0}>
-                <Box layerStyle={'cardLeft'} backgroundImage={`url(/weather/images/${weatherCodes[weather?.current.condition.code as keyof typeof weatherCodes]?.image[timesOfDay]}.jpg)`}></Box>
+                {weather && (
+                    <Box layerStyle={'cardLeft'} backgroundImage={`url(/weather/images/${weatherCodes[weather?.current.condition.code as keyof weatherCodesKeyType]?.image[timesOfDay]}.jpg)`}></Box>
+                )}
                 <Box layerStyle={'cardRight'}>
                     <VStack spacing={'50px'}>
                         <Select color={'black'} value={location} onChange={(event) => handleLocationChange(event.target.value)}>
@@ -80,7 +84,7 @@ export default function Weather() {
                         </Select>
                         <HStack spacing={'30px'}>
                             <Icon
-                                as={weatherCodes[weather?.current.condition.code as keyof typeof weatherCodes]?.icon[timesOfDay]}
+                                as={weatherCodes[weather?.current.condition.code as keyof weatherCodesKeyType]?.icon[timesOfDay]}
                                 fontSize={'88px'}
                                 color={'#2a3547'}
                             />
