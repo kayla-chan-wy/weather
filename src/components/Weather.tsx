@@ -65,7 +65,7 @@ export default function Weather() {
     return (
         <Flex alignItems={'center'} justifyContent={'center'} height={'100vh'} layerStyle='cardBase'>
             <HStack layerStyle={'card'} spacing={0}>
-                <Box layerStyle={'cardLeft'} backgroundImage={`url(/weather/images/${weatherCodes[weather?.current.condition.code as keyof typeof weatherCodes].image[timesOfDay]}.jpg)`}></Box>
+                <Box layerStyle={'cardLeft'} backgroundImage={`url(/weather/images/${weatherCodes[weather?.current.condition.code as keyof typeof weatherCodes]?.image[timesOfDay]}.jpg)`}></Box>
                 <Box layerStyle={'cardRight'}>
                     <VStack spacing={'50px'}>
                         <Select color={'black'} value={location} onChange={(event) => handleLocationChange(event.target.value)}>
