@@ -1,6 +1,26 @@
-# Getting Started with Create React App
+# React Weather App - Your Instant Weather Checker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a weather-checking application that provides you with up-to-the-minute weather information for selected locations around the world. With this app, you can easily access the current weather conditions and stay informed about the temperature, humidity, wind speed, and more, ensuring you're always prepared for the day ahead.
+
+To try out this app, please [click](https://kayla-chan-wy.github.io/weather) here.
+
+## Features
+* **Location Selection**: Choose your desired location from a dropdown menu, and this app will fetch and display the current weather data for that location instantly.
+
+* **Real-Time Accuracy**: this app utilizes a powerful weather API library to ensure you receive the most accurate and real-time weather information available.
+
+* **User-Friendly Interface**: Our intuitive and easy-to-navigate interface makes checking the weather a breeze for users of all levels.
+
+## Technologies Used
+This app is built on cutting-edge technologies to provide a smooth and reliable weather-checking experience:
+
+* **React**: As a leading JavaScript library for building user interfaces, React enables efficient component-based development and state management.
+
+* **TypeScript**: By incorporating TypeScript, WeatherNow ensures type safety, improved code quality, and enhanced development productivity.
+
+* **Chakra UI**: WeatherNow utilizes Chakra UI, a flexible and customizable component library, to achieve a visually appealing and consistent design throughout the application.
+
+* **[Weather API](https://www.weatherapi.com/) Library**: To fetch real-time weather data from various locations worldwide, this app relies on a dependable weather API library.
 
 ## Available Scripts
 
